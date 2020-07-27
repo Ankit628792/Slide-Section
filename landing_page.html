@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Responsive Web design </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landing_page.css">
+</head>
+<body>
+    
+<div class="wrapper">
+    <div class="left-col">
+    <img src="https://cdn.remodelista.com/wp-content/uploads/2019/07/logo-crop.jpg" class="logo">
+        
+    <div class="content">
+    <h1>Add plants to your living space</h1>    
+    <p>Plaants are an inexpensive means to accesorizing your space and adding color and texture.</p>
+    <button type="button">LEARN MORE</button>
+    </div>
+    </div>
+    
+    <div class="right-col">
+    
+        <div class="slider">
+        <img src="https://image.freepik.com/free-photo/3d-contemporary-living-room-interior-modern-furniture_1048-10264.jpg" id="Slide">
+        </div>
+        <div class="slider-content">
+        <h2>Where can I find ideas for small rooms?</h2><hr>
+        <p>They can absorb pollutants and remove harmful gases from the air. No Home <br>should be without these wonderful greens ! Designing small rooms comes with a<br> completely different challenge.</p>
+            
+            <div class="controller">
+            <img src="https://cdn0.iconfinder.com/data/icons/video-player-5/120/btn_Back-512.png" id="BackBtn">
+            <div class="vertical-line"></div>
+            <img src="https://cdn0.iconfinder.com/data/icons/video-player-5/120/btn_Back-512.png" id="NextBtn">
+            </div>
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    
+<script>
+    var Slide = document.getElementById("Slide");
+    var BackBtn = document.getElementById("BackBtn");
+    var NextBtn = document.getElementById("NextBtn");
+    
+    var slideimages = new Array(
+        "https://image.freepik.com/free-photo/3d-contemporary-living-room-interior-modern-furniture_1048-10264.jpg",
+        "https://image.freepik.com/free-photo/cozy-room-with-wooden-desk-laptop_23-2148267447.jpg",
+        "https://images.unsplash.com/photo-1499916078039-922301b0eb9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1574197634772-f0de0d41a02e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+    );
+    let i=0;
+    NextBtn.onclick = function(){
+       if(i<3){
+           Slide.src = slideimages[i+1];
+               i++;
+           }
+    }
+    BackBtn.onclick = function(){
+       if(i>0){
+           Slide.src = slideimages[i-1];
+               i--;
+           }
+    }
+    
+    
+</script>
+    
+    
+</body>
+</html>
